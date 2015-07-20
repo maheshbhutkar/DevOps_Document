@@ -1,0 +1,2 @@
+!/bin/bash
+curl -u maheshab:maheshab "http://172.16.222.142:8080/jenkins/job/AutoTriggerTestJavaWithMavenJunit/buildWithParameters?delay=10sec&token=1qaz2wsx&Branch=*/develop"

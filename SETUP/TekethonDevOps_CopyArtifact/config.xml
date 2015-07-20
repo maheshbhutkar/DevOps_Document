@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.copyartifact.CopyArtifact plugin="copyartifact@1.35.2">
+      <project>TekethonDevOps</project>
+      <filter>dm-service\target\*.war,dm-web\target\*.war,dm-persistence\target\*.jar,dm-common\target\*.jar</filter>
+      <target>D:\DevOPS\JENKINS_JOB\.jenkins\jobs\TekethonDevOps_CopyArtifact\workspace\Build\</target>
+      <excludes></excludes>
+      <selector class="hudson.plugins.copyartifact.StatusBuildSelector"/>
+      <flatten>true</flatten>
+      <doNotFingerprintArtifacts>false</doNotFingerprintArtifacts>
+    </hudson.plugins.copyartifact.CopyArtifact>
+    <hudson.tasks.BatchFile>
+      <command>@echo off&#xd;
+setlocal enableDelayedExpansion&#xd;
+set &quot;baseName=v_&quot;&#xd;
+set &quot;n=0&quot;&#xd;
+for /f &quot;delims=&quot; %%F in (&#xd;
+  &apos;2^&gt;nul dir /b /ad &quot;%baseName%*.&quot;^|findstr /xri &quot;%baseName%[0-9]*&quot;&apos;&#xd;
+) do (&#xd;
+  set &quot;name=%%F&quot;&#xd;
+  set &quot;name=!name:*%baseName%=!&quot;&#xd;
+  if !name! gtr !n! set &quot;n=!name!&quot;&#xd;
+)&#xd;
+set /a n+=1&#xd;
+xcopy /s &quot;D:\DevOPS\JENKINS_JOB\.jenkins\jobs\TekethonDevOps_CopyArtifact\workspace\Build\*.*&quot; &quot;D:\DevOPS\JENKINS_JOB\.jenkins\jobs\TekethonDevOps_CopyArtifact\workspace\%baseName%%n%\&quot;</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>VERSION</name>
+          <description>Build Version</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>TekethonDevOps_CopyArtifact</customWorkspace>
+  <builders>
+    <hudson.tasks.BatchFile>
+      <command>echo &quot;Deploy started&quot;&#xd;
+ &#xd;
+set backupDrive=d&#xd;
+set backupDirectory=\DevOPS\JENKINS_JOB\.jenkins\jobs\TekethonDevOps_CopyArtifact\workspace\%VERSION%\&#xd;
+ &#xd;
+cd %backupDirectory%&#xd;
+&#xd;
+winscp.com /command &quot;option batch abort&quot; &quot;option reconnecttime off&quot; &quot;option confirm off&quot; &quot;open scp://ravig:ravig@1234@172.16.222.132 -hostkey=&quot;*&quot; -timeout=999&quot; &quot;cd /data/tomcat/apache-tomcat-7.0.47/webapps&quot; &quot;put *.war ./&quot; &quot;exit&quot;&#xd;
+ &#xd;
+c: &#xd;
+</command>
+    </hudson.tasks.BatchFile>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

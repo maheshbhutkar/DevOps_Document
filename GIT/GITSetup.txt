@@ -1,0 +1,191 @@
+Path Environment Variable contains :-
+%JAVA_HOME%\bin;
+
+==================================
+Linux server setup :-
+maheshb
+maheshb@1234
+
+sudo su
+ravig@1234
+==================================
+
+For accessing remote repository using git commands then set the proxy,
+git config --global http.proxy http://maheshab:%40!mhigh21%40!@192.168.100.40:8080
+git config --global https.proxy https://maheshab:%40!mhigh21%40!@192.168.100.40:8080
+
+(Note :- for special characters like @ replace by %40)
+
+OR add the entry inside C:\Users\maheshab\.gitconfig file
+[http]
+    proxy = http://<username>:<password>@192.168.100.40:8080
+[https]
+    proxy = https://<username>:<password>@192.168.100.40:8080
+	
+OR
+set HTTPS_PROXY=http://maheshab:passwd@192.168.100.40:8080
+set HTTP_PROXY=http://maheshab:passwd@192.168.100.40:8080
+
+
+===========================================================
+On code commit in GIBLIT repository invoke Jenkins Jobs 
+===========================================================
+1) Add the hook inside D:\Maheshab\Software\Installed\gitblit-1.6.2\data\groovy\postcommit.groovy
+2) Add the entry inside gitblit.properties file where you have to mention the groovy script which suppose to be executed on commit
+		groovy.postReceiveScripts = postcommit
+http://gitblit.com/setup_hooks.html		
+
+		
+https://svn.wso2.org/repos/wso2/carbon/platform/branches/4.0.0/products/appfactory/1.0.0/vmware/appfactory_deployment/resources/jenkins.groovy		
+
+https://amitgharat.wordpress.com/2013/07/16/setting-up-github-like-server-locally-using-gitblit/
+
+C:\Program Files\TortoiseSVN\bin;C:\Program Files\Perforce;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Git\bin;
+
+C:\GIT\GetGnuWin32\bin;
+%MAVEN_HOME%\bin;
+
+Please send me the configuration screen shots while creating repository inside Gitblit.
+When new feature created corresponding Jenkins job gets created on the Jenkins server using shell script & jenkins-feature-config.xml available inside C:\jenkinsJobCreate. But do we execute that job automatically?
+
+java -server -Xmx1024M -jar gitblit.jar --repositoriesFolder  D:\GITSERVERREPOSITORY\repository
+java -server -Xmx1024M -jar gitblit.jar --repositoriesFolder /data/devops/repository
+
+https://172.16.222.132:8443/
+
+
+IP :- 172.16.224.207
+
+USING GITBLIT GO
+https://localhost:8443/
+
+USING GIT.war file inside TOMCAT
+http://172.16.224.207:8080/gitblit-1.6.2/
+modify basefolder entry 		<env-entry-value>D:\GITSERVERREPOSITORY</env-entry-value> inside D:\Maheshab\Software\Installed\apache-tomcat-7.0.47\webapps\gitblit-1.6.2\WEB-INF\web.xml
+You can modify following files as well,
+1) D:\Maheshab\Software\Installed\apache-tomcat-7.0.47\webapps\gitblit-1.6.2\WEB-INF\data\gitblit.properties
+	Increased repository size  :- git.packedGitLimit = 10m
+2) D:\Maheshab\Software\Installed\apache-tomcat-7.0.47\webapps\gitblit-1.6.2\WEB-INF\data\users.conf
+
+
+
+getopt.exe
+msysgit :- Msysgit is a contributed code for GIT which provides development environment that includes all the tools necessary for developers who want to contribute by writing & compiling code for Git in Windows. It is complete, in the sense that you just need to install msysGit, and then you can build Git, without installing any 3rd-party software. MsysGit is not Git for Windows; that is an installer which installs Git -- and only Git.
+
+GnuWin32
+
+
+
+*****************************************************************
+Addition of alias at "C:\Program Files (x86)\Git\etc\gitconfig" file
+
+[alias]
+    new-feature-web = "!sh -c \"git branch -r | grep -q feature/$1 && echo \\\"Remote branch origin/feature/$1 already exists, you must use a different name\\\" || (git flow feature start $1; git flow feature publish $1; C:/jenkinsJobCreate/create-feature-web-job.sh $1)\""
+    new-feature-auth = "!sh -c \"git branch -r | grep -q feature/$1 && echo \\\"Remote branch origin/feature/$1 already exists, you must use a different name\\\" || (git flow feature start $1; git flow feature publish $1; C:/jenkinsJobCreate/create-feature-auth-job.sh $1)\""
+    new-feature-cms = "!sh -c \"git branch -r | grep -q feature/$1 && echo \\\"Remote branch origin/feature/$1 already exists, you must use a different name\\\" || (git flow feature start $1; git flow feature publish $1; C:/jenkinsJobCreate/create-feature-cms-job.sh $1)\""
+	
+	
+*****************************************************************
+create-feature-auth-job.sh
+create-feature-cms-job.sh
+create-feature-web-job.sh
+Edit each of the 3 .sh files mentioned above and change the localhost port for the jenkins server
+This should be 8080 if you are going to be using Lannister for your repo
+*****************************************************************
+
+D:\Maheshab\Software\Installed\gitblit-1.6.2>java -jar gitblit.jar
+2015-06-02 18:51:13 [INFO ] *****************************************************************
+2015-06-02 18:51:13 [INFO ]             _____  _  _    _      _  _  _
+2015-06-02 18:51:13 [INFO ]            |  __ \(_)| |  | |    | |(_)| |
+2015-06-02 18:51:13 [INFO ]            | |  \/ _ | |_ | |__  | | _ | |_
+2015-06-02 18:51:13 [INFO ]            | | __ | || __|| '_ \ | || || __|
+2015-06-02 18:51:13 [INFO ]            | |_\ \| || |_ | |_) || || || |_
+2015-06-02 18:51:13 [INFO ]             \____/|_| \__||_.__/ |_||_| \__|
+2015-06-02 18:51:13 [INFO ]                          Gitblit v1.6.2
+2015-06-02 18:51:13 [INFO ]
+2015-06-02 18:51:13 [INFO ] *****************************************************************
+2015-06-02 18:51:13 [INFO ] Running on Windows 7 (6.1)
+2015-06-02 18:51:13 [INFO ] Logging initialized @343ms
+2015-06-02 18:51:14 [INFO ] Using JCE Standard Encryption Policy files, encryption key lengths will be limited
+2015-06-02 18:51:14 [INFO ] Generating Gitblit Certificate Authority (D:\Maheshab\Software\Installed\gitblit-1.6.2\data\certs\caKeyStore.p12)
+2015-06-02 18:51:15 [INFO ] Generating Gitblit Certificate Authority CRL (D:\Maheshab\Software\Installed\gitblit-1.6.2\data\certs\caRevocationList.crl)
+2015-06-02 18:51:15 [INFO ] Generating SSL certificate for localhost signed by Gitblit Certificate Authority (D:\Maheshab\Software\Installed\gitblit-1.6.2\data\serverKeyStore.jks)
+2015-06-02 18:51:15 [INFO ] Importing Gitblit Certificate Authority into trust store (D:\Maheshab\Software\Installed\gitblit-1.6.2\data\serverTrustStore.jks)
+2015-06-02 18:51:15 [INFO ] Setting up HTTPS transport on port 8443
+2015-06-02 18:51:15 [INFO ]    certificate alias = localhost
+2015-06-02 18:51:15 [INFO ]    keyStorePath   = D:\Maheshab\Software\Installed\gitblit-1.6.2\data\serverKeyStore.jks
+2015-06-02 18:51:15 [INFO ]    trustStorePath = D:\Maheshab\Software\Installed\gitblit-1.6.2\data\serverTrustStore.jks
+2015-06-02 18:51:15 [INFO ]    crlPath        = D:\Maheshab\Software\Installed\gitblit-1.6.2\data\certs\caRevocationList.crl
+2015-06-02 18:51:15 [INFO ] Shutdown Monitor listening on port 8081
+2015-06-02 18:51:15 [INFO ] jetty-9.2.3.v20140905
+2015-06-02 18:51:17 [INFO ] NO JSP Support for /, did not find org.apache.jasper.servlet.JspServlet
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IRuntimeManager]----
+2015-06-02 18:51:17 [INFO ] Basefolder  : D:\Maheshab\Software\Installed\gitblit-1.6.2\data
+2015-06-02 18:51:17 [INFO ] Settings    : D:\Maheshab\Software\Installed\gitblit-1.6.2\data\gitblit.properties
+2015-06-02 18:51:17 [INFO ] JVM timezone: Asia/Calcutta (IST +0530)
+2015-06-02 18:51:17 [INFO ] App timezone: Asia/Calcutta (IST +0530)
+2015-06-02 18:51:17 [INFO ] JVM locale  : en_US
+2015-06-02 18:51:17 [INFO ] App locale  : <client>
+2015-06-02 18:51:17 [INFO ] PF4J runtime mode is 'deployment'
+2015-06-02 18:51:17 [INFO ] Enabled plugins: []
+2015-06-02 18:51:17 [INFO ] Disabled plugins: []
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.INotificationManager]----
+2015-06-02 18:51:17 [WARN ] Mail service disabled.
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IUserManager]----
+2015-06-02 18:51:17 [INFO ] ConfigUserService(D:\Maheshab\Software\Installed\gitblit-1.6.2\data\users.conf)
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IAuthenticationManager]----
+2015-06-02 18:51:17 [INFO ] External authentication disabled.
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.transport.ssh.IPublicKeyManager]----
+2015-06-02 18:51:17 [INFO ] FileKeyManager (D:\Maheshab\Software\Installed\gitblit-1.6.2\data\ssh)
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IRepositoryManager]----
+2015-06-02 18:51:17 [INFO ] Repositories folder : D:\Maheshab\Software\Installed\gitblit-1.6.2\data\git
+2015-06-02 18:51:17 [INFO ] Identifying repositories...
+2015-06-02 18:51:17 [INFO ] 0 repositories identified with calculated folder sizes in 15 msecs
+2015-06-02 18:51:17 [INFO ] Lucene will process indexed branches every 2 minutes.
+2015-06-02 18:51:17 [INFO ] Garbage Collector (GC) is disabled.
+2015-06-02 18:51:17 [INFO ] Mirror service is disabled.
+2015-06-02 18:51:17 [INFO ] Alias UTF-9 & UTF-18 encodings as UTF-8 in JGit
+2015-06-02 18:51:17 [INFO ] Preparing 14 day commit cache. please wait...
+2015-06-02 18:51:17 [INFO ] 0 repositories identified with calculated folder sizes in 0 msecs
+2015-06-02 18:51:17 [INFO ] built 14 day commit cache of 0 commits across 0 repositories in 5 msecs
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IProjectManager]----
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IFederationManager]----
+2015-06-02 18:51:17 [INFO ]
+2015-06-02 18:51:17 [INFO ] ----[com.gitblit.manager.IGitblit]----
+2015-06-02 18:51:17 [INFO ] Starting services manager...
+2015-06-02 18:51:17 [INFO ] Federation passphrase is blank! This server can not be PULLED from.
+2015-06-02 18:51:17 [INFO ] Fanout PubSub service is disabled.
+2015-06-02 18:51:17 [INFO ] Git Daemon is listening on 0.0.0.0:9418
+2015-06-02 18:51:17 [INFO ] Generating RSA-2048 SSH host keypair...
+2015-06-02 18:51:19 [INFO ] Generating DSA SSH host keypair...
+2015-06-02 18:51:20 [INFO ] SSH Daemon (NIO2) is listening on 0.0.0.0:29418
+2015-06-02 18:51:20 [WARN ] No ticket service configured.
+2015-06-02 18:51:20 [INFO ]
+2015-06-02 18:51:20 [INFO ] ----[com.gitblit.manager.IPluginManager]----
+2015-06-02 18:51:20 [INFO ] No plugins
+2015-06-02 18:51:20 [INFO ]
+2015-06-02 18:51:20 [INFO ] All managers started.
+2015-06-02 18:51:20 [INFO ]
+2015-06-02 18:51:21 [INFO ] [GitBlitWebApp] init: Wicket core library initializer
+2015-06-02 18:51:21 [INFO ] [GitBlitWebApp] init: Wicket extensions initializer
+2015-06-02 18:51:21 [INFO ] [GitBlitWebApp] Started Wicket version 1.4.21 in deployment mode
+2015-06-02 18:51:21 [INFO ] Started o.e.j.w.WebAppContext@7bb6f986{/,file:/D:/Maheshab/Software/Installed/gitblit-1.6.2/data/temp/webapp/,AVAILABLE}{file:/D:/Maheshab/Software/Installed/gitblit-1.6.2/gitblit.jar}
+2015-06-02 18:51:21 [INFO ] Started ServerConnector@d4e25c3{SSL-HTTP/1.1}{0.0.0.0:8443}
+2015-06-02 18:51:21 [INFO ] Started @8300ms
+2015-06-02 18:52:17 [INFO ] 0 repositories identified with calculated folder sizes in 0 msecs
+2015-06-02 18:54:17 [INFO ] 0 repositories identified with calculated folder sizes in 2 msecs
+
+
+
+
+
+
+

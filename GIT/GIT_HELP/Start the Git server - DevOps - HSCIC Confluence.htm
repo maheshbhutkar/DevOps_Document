@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	            <title>Start the Git server - DevOps - HSCIC Confluence</title>
+    
+        
+
+                        
+    
+                        
+    
+
+                
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+<meta charset="UTF-8">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use AJS.Confluence.getContextPath() -->
+<meta id="confluence-context-path" name="confluence-context-path" content="">
+<meta id="confluence-base-url" name="confluence-base-url" content="https://stark.itblab.npfit.nhs.uk:443">
+
+<meta id="atlassian-token" name="atlassian-token" content="d8e8a1e4fba406a86f91a307e0204630dbec354f">
+
+<meta id="confluence-space-key" name="confluence-space-key" content="DOH">
+<script type="text/javascript">
+    // Deprecated global variables. To be removed in a future version of Confluence.
+    var contextPath = '';
+</script>
+
+    
+
+<!-- include system css resources -->
+
+
+    <!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/50/_/download/superbatch/css/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_004.css" media="print">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch.css" media="all">
+<!--[if gte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/50/_/download/superbatch/css/batch.css?conditionalComment=gte+IE+9" media="all">
+<![endif]-->
+<!--[if lte IE 8]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/50/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+8" media="all">
+<![endif]-->
+<!--[if lte IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/50/_/download/superbatch/css/batch.css?conditionalComment=lte+IE+9" media="all">
+<![endif]-->
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/bc480933e49a16d08ed19843fbe74bab/_/download/contextbatch/css/page/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_008.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/44fb2dce727d706b7eaf7b865813b27b/_/download/contextbatch/css/viewcontent/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_002.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_009.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_007.css" media="all">
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/7faebe078f02469b3b978494063032ca/_/download/contextbatch/css/atl.general/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_003.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/com.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/com_002.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/colors.css" media="all">
+<link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/default-theme.css" media="all">
+
+<!-- end system css resources -->
+
+    <meta name="confluence-request-time" content="1433317450009">
+<!-- Deprecated since 3.4. To be removed in a future version of Confluence; use atl.header -->
+        
+            <script type="text/x-template" title="share-content-popup">
+    <form action="#" method="post" class="aui share-content-popup">
+        <div class="field-group">
+            <div class="autocomplete-user-target">
+                <input class="text autocomplete-sharepage" id="users" data-max="10" data-dropdown-target=".autocomplete-user-target" data-none-message="No matching user or email found" placeholder="User name or email"/>
+            </div>
+            <ol class="recipients">
+            </ol>
+        </div>
+        <div class="field-group">
+            <textarea class="textarea" id="note" placeholder="Add an optional note"/>
+        </div>
+        <div class="field-group button-panel">
+            <div class="progress-messages-icon"></div>
+            <div class="progress-messages">
+            </div>
+            <input class="button submit" type="submit" value="Share" disabled/>
+            <a class="close-dialog" href="#">Cancel</a>
+        </div>
+    </form>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-username">
+    <li data-username="{username}" style="display: none">
+        <img src="{thumbnailLink.href}" title="{title}">
+        <span class="title" title="{title}">{title}</span>
+        <span class="remove-recipient"/>
+    </li>
+</script>
+
+<script type="text/x-template" title="share-content-popup-recipient-email">
+    <li data-email="{email}" style="display: none">
+        <img src="{icon}" title="{email}">
+        <span class="title" title="{email}">{email}</span>
+        <span class="remove-recipient"/>
+    </li>
+</script>
+    
+        
+            <meta name="ajs-use-keyboard-shortcuts" content="true">
+            <meta name="ajs-keyboardshortcut-hash" content="eb405d01f898b04cef43fbbe9f92eb4b">
+            <meta name="ap-request-id" content="4707233210ab09e">
+            <style>.ia-fixed-sidebar, .ia-splitter-left {width: 285px;}.theme-default .ia-splitter #main {margin-left: 285px;}.acs-side-bar {visibility: hidden;}</style>
+            
+
+    
+            
+    
+    
+            <meta name="ajs-page-id" content="16908605">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-page-title" content="Start the Git server">
+            <meta name="ajs-parent-page-title" content="How To">
+            <meta name="ajs-parent-page-id" content="11373267">
+            <meta name="ajs-space-key" content="DOH">
+            <meta name="ajs-space-name" content="DevOps">
+            <meta name="ajs-from-page-title" content="">
+            <meta name="ajs-browse-page-tree-mode" content="view">
+            <meta name="ajs-user-display-name" content="Rahul D. Ghadage">
+            <meta name="ajs-editor.loader.comment.resources" content="&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/931010d351dc7f270b74458129a8e810/_/download/contextbatch/css/comment-editor/batch.css&quot; media=&quot;all&quot;&gt;
+">
+            <meta name="ajs-context-path" content="">
+            <meta name="ajs-base-url" content="https://stark.itblab.npfit.nhs.uk:443">
+            <meta name="ajs-version-number" content="5.1.3">
+            <meta name="ajs-build-number" content="4226">
+            <meta name="ajs-remote-user" content="rahulg">
+            <meta name="ajs-static-resource-url-prefix" content="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/_">
+            <meta name="ajs-global-settings-attachment-max-size" content="50485760">
+            <meta name="ajs-user-locale" content="en_GB">
+            <meta name="ajs-enabled-dark-features" content="">
+            <meta name="ajs-atl-token" content="d8e8a1e4fba406a86f91a307e0204630dbec354f">
+            <meta name="ajs-confluence-flavour" content="VANILLA">
+            <meta name="ajs-editor.loader.resources" content="&lt;!--[if lt IE 9]&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/8763a2fbb479c31c537d82a900bfb2e1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent/batch.css?conditionalComment=lt+IE+9&quot; media=&quot;all&quot;&gt;
+&lt;![endif]--&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/8763a2fbb479c31c537d82a900bfb2e1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent/batch.css&quot; media=&quot;all&quot;&gt;
+&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/8763a2fbb479c31c537d82a900bfb2e1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent/batch.css?media=%28max-width%3A+1270px%29&quot; media=&quot;(max-width: 1270px)&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/8763a2fbb479c31c537d82a900bfb2e1/_/download/contextbatch/js/editor,macro-browser,fullpage-editor,-viewcontent/batch.js&quot; &gt;&lt;/script&gt;
+">
+            <meta name="ajs-date.format" content="MMM dd, yyyy">
+    
+    <link rel="shortcut icon" href="https://stark.itblab.npfit.nhs.uk/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://stark.itblab.npfit.nhs.uk/favicon.ico">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://stark.itblab.npfit.nhs.uk/opensearch/osd.action" title="HSCIC Confluence">
+    
+                    
+            
+
+    <!-- include system javascript resources -->
+    <script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_004.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/50/_/download/superbatch/js/batch.js?conditionalComment=lte+IE+8" ></script>
+<![endif]-->
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_002.js"></script>
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch.js"></script>
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_003.js"></script>
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/com_003.js"></script>
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/com.js"></script>
+<script type="text/javascript" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/com_002.js"></script>
+
+    
+
+        
+    <!-- end system javascript resources -->
+    
+
+    
+                <link rel="canonical" href="https://stark.itblab.npfit.nhs.uk/display/DOH/Start+the+Git+server">
+        <link rel="shortlink" href="https://stark.itblab.npfit.nhs.uk/x/PQECAQ">
+    <meta name="wikilink" content="[DOH:Start the Git server]">
+    <meta name="page-version" content="1">
+
+<!--[if lt IE 9]>
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/8763a2fbb479c31c537d82a900bfb2e1/_/download/contextbatch/css/editor,macro-browser,fullpage-editor,-viewcontent/batch.css?conditionalComment=lt+IE+9" media="all">
+<![endif]--><link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_005.css" media="all"><link type="text/css" rel="stylesheet" href="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/batch_006.css" media="(max-width: 1270px)">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.1.3/_">
+            <meta name="ajs-num-attachments" content="0">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-cancel-button-close-text" content="Close">
+            <meta name="ajs-content-id" content="16908605">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-save-drafts" content="true">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-cancel-button-discard-text" content="">
+            <meta name="ajs-draft-id" content="0">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="16908605">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="page">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-can-send-email" content="true">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autocomplete" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autoformat" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </head>
+
+<body onload="placeFocus()" id="com-atlassian-confluence" class="theme-default  aui-layout aui-theme-default">
+
+        
+    <ul id="assistive-skip-links" class="assistive">
+    <li><a href="#title-heading">Skip to content</a></li>
+    <li><a href="#breadcrumbs">Skip to breadcrumbs</a></li>
+    <li><a href="#header-menu-bar">Skip to header menu</a></li>
+    <li><a href="#navigation">Skip to action menu</a></li>
+    <li><a href="#quick-search-query">Skip to quick search</a></li>
+</ul>
+<div id="page">
+<div id="full-height-container">
+    <div id="header-precursor">
+        <div class="cell">
+            
+                            </div>
+    </div>
+    
+
+
+
+<header id="header" role="banner">
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation"><div class="aui-header-inner"><div class="aui-header-before"><a class="aui-dropdown2-trigger app-switcher-trigger" aria-owns="app-switcher" aria-haspopup="true" tabindex="0"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a><div id="app-switcher" class="aui-dropdown2 aui-style-default"><div class="aui-dropdown2-section"><ul class="nav-links"><li class="nav-link"><a href="https://10.210.164.101:80/" class="aui-dropdown2-radio interactive" title="https://10.210.164.101:80"><span class="nav-link-label">Jira</span></a></li><li class="nav-link nav-link-local"><a href="https://stark.itblab.npfit.nhs.uk/" class="aui-dropdown2-radio interactive checked" title="https://stark.itblab.npfit.nhs.uk:443/"><span class="nav-link-label">HSCIC Confluence</span></a></li></ul></div></div><script>
+            (function (NL) {
+                var initialise = function () {
+                    // For some milestones of AUI, the atlassian soy namespace was renamed to aui. Handle that here by ensuring that window.atlassian is defined.
+                    window.atlassian = window.atlassian || window.aui;
+                    new NL.AppSwitcher({
+                        dropdownContents: '#app-switcher'
+                    });
+                };
+                if (NL.AppSwitcher) {
+                    initialise();
+                } else {
+                    NL.onInit = initialise;
+                }
+            }(window.NL = (window.NL || {})));
+            window.NL.isUserAdmin = false</script></div><div class="aui-header-primary"><h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://stark.itblab.npfit.nhs.uk/"><img src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/confluence-logo.png" alt="HSCIC Confluence"></a></h1><ul class="aui-nav">
+                            <li>
+            
+        
+        
+<a id="space-directory-link" href="https://stark.itblab.npfit.nhs.uk/spacedirectory/view.action" class=" aui-nav-imagelink" title="Spaces">
+            <span>Spaces</span>
+    </a>
+        </li>
+                    <li>
+            
+    
+        
+<a id="people-directory-link" href="https://stark.itblab.npfit.nhs.uk/peopledirectory.action" class=" aui-nav-imagelink" title="People">
+            <span>People</span>
+    </a>
+        </li>
+                                            <li>
+            
+    
+            
+<a id="create-page-button" href="#" class="aui-button aui-style aui-button-primary aui-nav-imagelink" title="Create Content (c)">
+            <span>Create</span>
+    </a>
+        </li>
+        </ul>
+</div><div class="aui-header-secondary"><ul class="aui-nav">
+                <li>
+<form id="quick-search" class="aui-quicksearch dont-default-focus header-quicksearch" action="/dosearchsite.action" method="get">
+    <fieldset>
+                        <label for="quick-search-query" class="assistive">Quick Search</label>
+        <input id="quick-search-query" class="text app-search search quick-search-query" accesskey="q" autocomplete="off" name="queryString" title="Quick Search (/or g , g)" placeholder="Search" type="text">
+        <input id="quick-search-submit" class="quick-search-submit" value="Search" type="submit">
+
+        <div class="aui-dd-parent quick-nav-drop-down"></div>
+    </fieldset>
+    <div class="hidden parameters">
+                    <!-- putMetadata failed to add value for key "quick-nav-enabled" so rendering metadata inline - see server debug log for details -->
+        <meta name="ajs-quick-nav-enabled" content="true">
+                </div>
+</form>
+</li>
+    <li>    
+        <a id="help-menu-link" class="aui-nav-link aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="help-menu-link-content" title="Help">
+        <span class="aui-icon aui-icon-small aui-iconfont-help">Help</span><span class="aui-icon-dropdown"></span>
+    </a>
+    <nav id="help-menu-link-content" class="aui-dropdown2 aui-style-default" aria-hidden="true">
+                    <div class="aui-dropdown2-section">
+                <ul id="help-menu-link-leading" class="aui-list-truncate section-leading first">
+                                            <li>
+    
+        
+<a id="confluence-help-link" href="http://docs.atlassian.com/confluence/docs-51/Getting+Help+And+Support" class="interactive" title="Visit the Confluence documentation home" target="_blank">
+        Online Help
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="keyboard-shortcuts-link" href="#" class="interactive" title="View available keyboard shortcuts (?)">
+        Keyboard Shortcuts
+</a>
+</li>
+                                            <li>
+    
+        
+<a id="feed-builder-link" href="https://stark.itblab.npfit.nhs.uk/dashboard/configurerssfeed.action" class="interactive" title="Create your custom RSS feed.">
+        Feed Builder
+</a>
+</li>
+                                            <li>
+    
+        
+<a id="whats-new-menu-link" href="http://docs.atlassian.com/confluence/docs-51/whatsnew/iframe?e=UmFodWwuR2hhZGFnZUBtYXN0ZWsuY29t&amp;od=false&amp;a=false" class="interactive" title="">
+        What’s new
+</a>
+</li>
+                                            <li>
+    
+            
+<a id="gadget-directory-link" href="#" class="user-item administration-link  interactive" title="Browse gadgets provided by Confluence">
+        Available Gadgets
+</a>
+</li>
+                                    </ul>
+            </div>
+            </nav>
+    </li>
+    <li>    
+    </li>
+                <li>
+        
+    
+            
+<a id="notifications-anchor" href="#" class="mw-anchor read aui-nav-imagelink" title="Open Notifications (g , n)"><div class="badge-i aui-icon aui-icon-small"><span class="badge-w"><span class="badge">0</span></span></div></a>
+    </li>
+        <li>                                    
+        <a id="user-menu-link" class="aui-dropdown2-trigger " aria-haspopup="true" aria-owns="user-menu-link-content" data-username="rahulg" href="#" title="Rahul D. Ghadage">
+                    <div class="aui-avatar aui-avatar-small">
+                <div class="aui-avatar-inner">
+                    <img src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/default.png">
+                </div>
+            </div>
+            <span class="aui-icon-dropdown"></span>
+        </a>
+        <nav id="user-menu-link-content" class="aui-dropdown2 aui-style-default">
+                            <div class="aui-dropdown2-section">
+                    <ul id="user-menu-link-user-preferences" class="aui-list-truncate section-user-preferences first">
+                                                    <li>
+    
+        
+<a id="create-personal-space-link" href="https://stark.itblab.npfit.nhs.uk/spaces/createpersonalspace.action" class="   user-item personal-space " title="">
+        Add Personal Space…
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="view-user-history-link" href="https://stark.itblab.npfit.nhs.uk/users/viewuserhistory.action" class="   user-item user-history popup-link " title=" (g , r)">
+        Recently Viewed
+</a>
+</li>
+                                            </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="user-menu-link-user-content" class="aui-list-truncate section-user-content">
+                                                    <li>
+    
+        
+<a id="view-user-profile-link" href="https://stark.itblab.npfit.nhs.uk/users/viewmyprofile.action" class="   user-item user-profile " title="">
+        Profile
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="user-settings-link" href="https://stark.itblab.npfit.nhs.uk/users/viewmysettings.action" class="   user-item " title="">
+        Settings
+</a>
+</li>
+                                                    <li>
+    
+        
+<a href="https://stark.itblab.npfit.nhs.uk/users/viewfollow.action?username=rahulg" class="   follow-link " title="">
+        Network
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="user-favourites-link" href="https://stark.itblab.npfit.nhs.uk/users/viewmyfavourites.action" class="   user-item " title="">
+        Favourites
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="user-watches-link" href="https://stark.itblab.npfit.nhs.uk/users/viewnotifications.action" class="   user-item " title="">
+        Watches
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="user-drafts-link" href="https://stark.itblab.npfit.nhs.uk/users/viewmydrafts.action" class="   user-item " title="">
+        Drafts
+</a>
+</li>
+                                                    <li>
+    
+        
+<a id="upm-requests-link" href="https://stark.itblab.npfit.nhs.uk/plugins/servlet/upm/requests?source=header_user" class="    " title="">
+        Atlassian Marketplace
+</a>
+</li>
+                                            </ul>
+                </div>
+                            <div class="aui-dropdown2-section">
+                    <ul id="user-menu-link-user-operations" class="aui-list-truncate section-user-operations">
+                                                    <li>
+    
+        
+<a id="logout-link" href="https://stark.itblab.npfit.nhs.uk/logout.action" class="   user-item logout-link " title="">
+        Log Out
+</a>
+</li>
+                                            </ul>
+                </div>
+                    </nav>
+                    </li>
+</ul>
+</div></div><!-- .aui-header-inner--></nav><!-- .aui-header -->
+    <br class="clear">
+</header>
+
+    
+    	<div class="ia-splitter">
+    		<div class="ia-splitter-left">
+    			<div style="width: 285px; top: 41px; left: 0px;" class="ia-fixed-sidebar">
+    				
+	    	<div style="visibility: visible;" class="acs-side-bar ia-scrollable-section"><div class="acs-side-bar-space-info tipsy-enabled" data-configure-tooltip="Edit Space Details"><div class="avatar"><div class="space-logo " data-key="DOH" data-name="DevOps" data-entity-type="confluence.space"><div class="avatar-img-container"><div class="avatar-img-wrapper"><a href="https://stark.itblab.npfit.nhs.uk/display/DOH" title="DevOps"><img class="avatar-img" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/default-space-logo-48.png" alt="DevOps"></a></div></div></div></div><div class="name"><a href="https://stark.itblab.npfit.nhs.uk/display/DOH" title="DevOps">DevOps</a></div><div class="flyout-handle icon"></div></div><div class="acs-nav-wrapper"><div class="acs-nav"><div class="acs-nav-sections"><div class="main-links-section "><ul class="acs-nav-list"><li class="acs-nav-item wiki current-item" data-collector-key="spacebar-pages"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/collector/pages.action?key=DOH" data-collapsed-tooltip="Pages"><span class="icon"></span><span class="acs-nav-item-label">Pages</span></a></li><li class="acs-nav-item blog" data-collector-key="spacebar-blogs"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/pages/viewrecentblogposts.action?key=DOH" data-collapsed-tooltip="Blog"><span class="icon"></span><span class="acs-nav-item-label">Blog</span></a></li></ul></div><h5>Space Shortcuts</h5><div data-collapsed-tooltip="Space Shortcuts" class="quick-links-section tipsy-enabled "><ul class="acs-nav-list"><li class="acs-nav-item pinned_page"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/display/DOH/Wiki" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">Wiki</span></a></li><li class="acs-nav-item pinned_page"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/display/DOH/Glossary" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">Glossary</span></a></li><li class="acs-nav-item pinned_page blueprint file-list"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/display/DOH/File+Lists" data-collapsed-tooltip="null"><span class="icon"></span><span class="acs-nav-item-label">File Lists</span></a></li></ul></div><hr><div data-collapsed-tooltip="Space tools" class="advanced-links-section tipsy-enabled "><ul class="acs-nav-list"><li class="acs-nav-item settings" data-collector-key="spacebar-advanced"><a class="acs-nav-item-link tipsy-enabled" href="https://stark.itblab.npfit.nhs.uk/spaces/spacetools.action?key=DOH" data-collapsed-tooltip="Space tools"><span class="icon"></span><span class="acs-nav-item-label">Space tools</span></a></li><li class="acs-nav-item configure"><a id="acs-configure-link" class="acs-nav-item-link" href="" data-collapsed-tooltip="Configure sidebar"><span class="icon"></span><span class="acs-nav-item-label">Configure sidebar</span></a></li></ul></div></div></div></div><div data-collapsed-tooltip="Child pages" class="ia-secondary-container tipsy-enabled" data-tree-type="pages"><hr><div class="ia-secondary-header"><h5 class="ia-secondary-header-title wiki current-item"><span class="icon"></span><span class="label">Start the Git server</span></h5></div><div class="ia-secondary-content"><a class="create-child-page-link" href="https://stark.itblab.npfit.nhs.uk/pages/createpage.action?spaceKey=DOH&amp;fromPageId=16908605"><span class="icon"></span><span class="label">Create child page</span></a></div></div><div class="hidden"><a title=" (g , s)" href="https://stark.itblab.npfit.nhs.uk/collector/pages.action?key=DOH" id="space-pages-link"></a><script type="text/x-template" title="logo-config-content"><h2>Space Details</h2><form id="crop-photo-form" class="aui" method="post" action="#"><div id="sidebar-logo-messages"></div><fieldset><div class="field-group"><label for="spaceName">Name</label><input autocomplete="off" name="spaceName" id="spaceName" class="text" maxlength="255" value="{spaceName}"><input type="hidden" name="spaceKey" id="spaceKey" value="DOH"><input type="hidden" name="offsetX" id="avatar-offsetX" value="-1"><input type="hidden" name="offsetY" id="avatar-offsetY" value="-1"><input type="hidden" name="width" id="avatar-width" value="-1"><input type="hidden" name="logoType" id="logoType" value="default" data-last-value="default"></div></fieldset></form><form id="upload-logo-form" class="aui" method="POST" action="#" enctype="multipart/form-data"><fieldset class="group"><legend><span>Logo</span></legend><div class="field-group"><input class="upload" type="file" id="upload-logo-input" name="upload-logo-input"></div><small class="hidden"><a href="#" id="reset-logo">Reset to default logo</a></small><div id="image-holder" /></fieldset></form><div id="space-details-actions" class="buttons-container"><div class="buttons"><button class="aui-button save">Save</button><a href="#" class="aui-button aui-button-link cancel">Cancel</a></div></div></script></div></div>
+    
+    			<div title=" ([)" data-tooltip="Collapse sidebar ( '[' )" class="ia-splitter-handle tipsy-enabled"><div class="ia-splitter-handle-highlight"></div></div></div>
+    		</div>
+        <!-- \#header -->
+
+        
+        <div style="margin-left: 285px;" id="main" class=" aui-page-panel">
+                <div id="main-header">
+            
+    <div id="navigation" class="content-navigation view">
+                    <ul class="ajs-menu-bar">
+                            <li class="ajs-button normal">
+
+    
+        
+    
+    <a id="editPageLink" href="https://stark.itblab.npfit.nhs.uk/pages/editpage.action?pageId=16908605" class="edit" accesskey="e" title="Edit (e)">
+                <span><u>E</u>dit</span>    </a>
+</li>
+                <li class="ajs-button normal">
+
+    
+            
+    
+    <a id="shareContentLink" href="#" class="share" title="Share this content by emailing other users (s)">
+                <span><u>S</u>hare</span>    </a>
+</li>
+                        
+        <li class="normal ajs-menu-item">
+        <a id="add-menu-link" class="add hidden ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="add-menu" data-container="#navigation"><span><span>Add</span></span></a>         <div id="add-menu" class="aui-dropdown2 aui-style-default">
+                            <ul id="add-menu-space" class="section-space first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="createPageLink" href="https://stark.itblab.npfit.nhs.uk/pages/createpage.action?spaceKey=DOH&amp;fromPageId=16908605" class="add-page" accesskey="p" title="Add a Page">
+                <span>Page</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="createBlogpostLink" href="https://stark.itblab.npfit.nhs.uk/pages/createblogpost.action?spaceKey=DOH" class="add-news" title="Add a Blog Post (b)">
+                <span>Blog Post</span>    </a>
+</li>
+                                </ul>
+                            <ul id="add-menu-page" class="section-page aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="add-comment-menu-link" href="https://stark.itblab.npfit.nhs.uk/display/DOH/Start+the+Git+server?showComments=true&amp;showCommentArea=true#addcomment" class="add-comment" title="Add a Comment">
+                <span>Comment</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="add-attachment-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewpageattachments.action?pageId=16908605" class="add-attachment" accesskey="t" title="Add an Attachment">
+                <span>Attachment</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+                    
+        <li class="normal ajs-menu-item">
+        <a id="action-menu-link" class="action ajs-menu-title aui-dropdown2-trigger" href="#" aria-haspopup="true" aria-owns="action-menu" data-container="#navigation"><span><span>Tools</span></span></a>         <div id="action-menu" class="aui-dropdown2 aui-style-default most-right-menu-item">
+                            <ul id="action-menu-primary" class="section-primary first aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="view-attachments-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewpageattachments.action?pageId=16908605" class="action-view-attachments" accesskey="t" title="View Attachments (t)">
+                <span>A<u>t</u>tachments (0)</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-view-history-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewpreviousversions.action?pageId=16908605" class="action-view-history" title="">
+                <span>Page History</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-page-permissions-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewinfo.action?pageId=16908605" class="action-page-permissions" title="Edit restrictions">
+                <span>Restrictions</span>    </a>
+</li>
+                                </ul>
+                            <ul id="action-menu-marker" class="section-marker aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="page-favourite" href="https://stark.itblab.npfit.nhs.uk/labels/addfavourite.action?entityId=16908605&amp;atl_token=d8e8a1e4fba406a86f91a307e0204630dbec354f" class="action-page-favourite" title="">
+                <span>Favourite</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="page-watch" href="https://stark.itblab.npfit.nhs.uk/pages/addpagenotification.action?pageId=16908605&amp;atl_token=d8e8a1e4fba406a86f91a307e0204630dbec354f" class="action-page-watching" title="">
+                <span>Watch</span>    </a>
+</li>
+                                        <li class="assistive">
+
+    
+        
+    
+    <a id="page-unwatch" href="https://stark.itblab.npfit.nhs.uk/pages/removepagenotification.action?pageId=16908605&amp;atl_token=d8e8a1e4fba406a86f91a307e0204630dbec354f" class="action-page-watching selected ie-page-watching-selected inactive" title="">
+                <span>Stop Watching</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="manage-watchers-menu-item" href="https://stark.itblab.npfit.nhs.uk/pages/managepagenotifications.action?pageId=16908605" class="action-manage-watchers" title="Manage page watchers (w)">
+                <span>Manage Watchers</span>    </a>
+</li>
+                                </ul>
+                            <ul id="action-menu-secondary" class="section-secondary aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="view-page-info-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewinfo.action?pageId=16908605" class="action-view-info" title="">
+                <span>Page Information</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="link-to-page-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewinfo.action?pageId=16908605" class="" title="Link to this Page (k)">
+                <span>Link to this Page…</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="view-in-hierarchy-link" href="https://stark.itblab.npfit.nhs.uk/pages/reorderpages.action?key=DOH&amp;openId=16908605#selectedPageInHierarchy" class="" title="">
+                <span>View in Hierarchy</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-view-source-link" href="https://stark.itblab.npfit.nhs.uk/plugins/viewsource/viewpagesrc.action?pageId=16908605" class="action-view-source popup-link" title="">
+                <span>View Source</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-export-pdf-link" href="https://stark.itblab.npfit.nhs.uk/spaces/flyingpdf/pdfpageexport.action?pageId=16908605" class="" title="">
+                <span>Export to PDF</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-export-word-link" href="https://stark.itblab.npfit.nhs.uk/exportword?pageId=16908605" class="action-export-word" title="">
+                <span>Export to Word</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="import-word-doc" href="https://stark.itblab.npfit.nhs.uk/pages/worddav/uploadimport.action?pageId=16908605" class="" title="">
+                <span>Import Word Document</span>    </a>
+</li>
+                                </ul>
+                            <ul id="action-menu-modify" class="section-modify aui-dropdown2-section">
+                                            <li>
+
+    
+        
+    
+    <a id="action-copy-page-link" href="https://stark.itblab.npfit.nhs.uk/pages/copypage.action?idOfPageToCopy=16908605&amp;spaceKey=DOH" class="action-copy" title="">
+                <span>Copy</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-move-page-dialog-link" href="https://stark.itblab.npfit.nhs.uk/pages/viewpage.action?pageId=16908605" class="action-move" title="">
+                <span>Move</span>    </a>
+</li>
+                                        <li>
+
+    
+        
+    
+    <a id="action-remove-content-link" href="https://stark.itblab.npfit.nhs.uk/pages/removepage.action?pageId=16908605" class="action-remove" title="">
+                <span>Remove</span>    </a>
+</li>
+                                </ul>
+                    </div>
+    </li>
+            </ul>
+    </div>
+
+            
+            <h1 id="title-heading" class="pagetitle with-breadcrumbs">
+                
+                                    <div id="breadcrumb-section">
+                        
+    
+    
+    <ol id="breadcrumbs">
+                    
+                
+        <li class="first">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/collector/pages.action?key=DOH">Pages</a></span>
+                                                </li><li id="ellipsis" title="Show all breadcrumbs"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/DevOps+Home">DevOps Home</a></span>
+                                        
+                
+        </li><li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Wiki">Wiki</a></span>
+                                        
+                
+        </li><li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Useful">Useful</a></span>
+                            
+                
+        </li><li>
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/How+To">How To</a></span>
+                </li></ol>
+
+
+                    </div>
+                
+                <span id="title-text" class="with-breadcrumbs">
+                                                <a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Start+the+Git+server">Start the Git server</a>
+                                    </span>
+            </h1>
+        </div><!-- \#main-header -->
+        
+        
+
+        <div id="sidebar-container">
+                                                </div><!-- \#sidebar-container -->
+
+        
+    
+
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                                                                        
+                      
+
+
+
+
+        
+
+    
+    
+        
+    
+    
+                    
+    
+
+    
+
+
+
+
+<div id="content" class="page view">
+    
+
+<div id="action-messages">
+                        </div>
+
+
+
+    
+<script type="text/x-template" title="movePageDialog">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Specify the new parent page for this page and its children by space and title.
+            </div>
+        </div>
+    </div>
+        <form class="aui" onsubmit="return false;">
+	        <fieldset>
+	                
+
+    <legend class="assistive"><span>Change the Parent Page to a Known Page</span></legend>
+	            <div class="field-group">
+	                <label for="new-space">New space:</label>
+	                <div class="value new-space-value">
+	                    <input id="new-space-key" name="new-space-key" type="hidden" value="DOH">
+	                    	                        <span class="space-input">
+	                            <input id="new-space" name="new-space" value="DevOps" class="text long-field">
+	                        </span>
+                            <div class="description hidden">Start typing a space name to see a list of suggestions.</div>
+	                    	                    <div class="new-space-dropdown aui-dd-parent autocomplete"></div>
+	                </div>
+	            </div>
+	            <div class="field-group">
+	                <label for="new-parent-page">New parent page:</label>
+	                <div class="value new-parent-page-value">
+	                    <span class="page-input">
+	                        <input id="new-parent-page" name="new-parent-page" value="How To" class="text long-field">
+	                    </span>
+                        <div class="description">Start typing a page title to see a list of suggestions.</div>
+	                    <div class="new-parent-page-dropdown aui-dd-parent autocomplete"></div>
+	                </div>
+	            </div>
+	        </fieldset>
+        </form>
+    <div class="location-info">
+        <div class="row">
+            <label>Current location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="current-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <label>New location:</label>
+            <div class="value breadcrumbs-container">
+                <div class="breadcrumbs-line">
+                    <ul id="new-parent-breadcrumbs" class="breadcrumbs">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" title="movePageSearchPanel">
+    <div class="row information">
+        <div class="inner">
+            <div class="element">
+                Search for and select the new parent page for this page and its children.
+            </div>
+        </div>
+    </div>
+    <div id="move-page-search-container" class="row">
+	        <form class="aui" onsubmit="return false;">
+	            <fieldset>
+	                    
+
+    <legend class="assistive"><span>Search for a New Parent Page</span></legend>
+	                    
+
+    <label  for="move-page-search-query" class="assistive">Search keywords</label>
+	                <input class="search-query text" id="move-page-search-query">
+	                    
+
+    <label  for="move-page-search-space" class="assistive">Search in space</label>
+	                	                    <select id="move-page-search-space" class="search-space select">
+	                        <option value="conf_all" selected="selected">All Spaces</option>
+	                        <option value="DOH">DevOps</option>
+	                    </select>
+	                	                <input type="button" value="Search" class="button submit">
+	                	            </fieldset>
+	        </form>
+        <div class="search-results">
+        </div>
+    </div>
+</script>
+<script type="text/x-template" title="searchResultsGrid">
+    <table class="aui">
+        <thead>
+            <tr class="header">
+                <th class="search-result-title">Page Title</th>
+                <th class="search-result-space">Space</th>
+                <th class="search-result-date">Updated</th>
+            </tr>
+        </thead>
+    </table>
+</script>
+<script type="text/x-template" title="searchResultsGridCount">
+    <p class="search-result-count">{0}</p>
+</script>
+<script type="text/x-template" title="searchResultsGridRow">
+    <tr class="search-result">
+        <th class="search-result-title"><a href="{1}" class="content-type-{2}"><span>{0}</span></a></th>
+        <td class="search-result-space"><a class="space" href="/display/{4}/" title="{3}">{3}</a></td>
+        <td class="search-result-date"><span class="date" title="{6}">{5}</span></td>
+    </tr>
+</script><!-- Start restrictions section -->
+<script type="text/x-template" title="page-permissions-div">
+<div id="page-permissions-div">
+    <div id="page-permissions-editor-form">
+                <div id="page-permissions-error-div" class="aui-message warning shadowed closeable hidden">
+            <p class="title"/>
+            <span class="aui-icon icon-warning"></span>
+            <span class="aui-icon icon-close" tabindex="0" role="button"></span>
+        </div>
+                <div id="page-permissions-type-radios" class="page-permissions-label-rows">
+            <div class="radio">
+                <input id="restrictViewRadio" class="radio" type="radio" checked="checked" name="pagePermissionTypeRadio" value="view"/>
+                <label for="restrictViewRadio">Restrict viewing of this page</label>
+                <input id="restrictEditRadio" class="radio" type="radio" name="pagePermissionTypeRadio" value="edit"/>
+                <label for="restrictEditRadio">Restrict editing of this page</label>
+            </div>
+        </div>
+        <div id="page-permissions-input" class="page-permissions-label-rows">
+            <div class="page-permissions-label">To:</div>
+            <div id="page-permissions-chooser-box">
+                                    <span id="page-permissions-choose-me" class="aui-button normal">
+                        <a href="#">
+                            <img src="/images/icons/profilepics/default.png" alt="Me"/>
+                            Me
+                        </a>
+                        <span class="remote-user-name hidden">rahulg</span>
+                    </span>
+                                <span id="page-permissions-choose-user" class="aui-button">
+                    
+
+
+    
+    
+
+
+
+
+
+
+<a id='userpicker-popup-link'  href='#' onClick="var picker = window.open('/spaces/openuserpicker.action?key=DOH&amp;startIndex=0&amp;onPopupSubmit=AJS.PagePermissions.addUserPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=700,height=680,scrollbars=yes'); picker.focus(); return false;">
+    				    <img src="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/_/images/icons/user_16.png" height=16 width=16 border=0 align="absmiddle"  title="Choose users" />
+						    Person...
+	        </a>
+
+
+                </span>
+                <span id="page-permissions-choose-group" class="aui-button">
+                    
+
+
+    
+    
+
+ 
+
+
+
+
+<a id='grouppicker-popup-link'  href='#' onClick="var picker = window.open('/spaces/opengrouppicker.action?key=DOH&amp;startIndex=0&amp;actionName=dosearchgroups.action&amp;onPopupSubmit=AJS.PagePermissions.addGroupPermissions', 'EntitiesPicker', 'status=yes,resizable=yes,top=100,left=200,width=580,height=550,scrollbars=yes'); picker.focus(); return false;">
+    				    <img src="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/_/images/icons/group_16.png" height=16 width=16 border=0 align="absmiddle"  title="Choose groups" />
+						    Group...
+	        </a>
+
+
+                </span>
+            </div>
+            <div id="page-permissions-input-box">
+                <input id="page-permissions-names-input" class="autocomplete-user-or-group text" type="text" name="permissionNames"
+                    placeholder="Enter user or group name:"
+                    data-max="10" data-none-message="No matches"
+                    data-target="#page-permissions-names-hidden"
+                    data-dropdown-target="#page-perms-name-dropdown-wrapper" data-resize-to-input="true"
+                    size="30"/>
+                <input
+    type="hidden"
+                            id="page-permissions-names-hidden"           />                <button class="aui-button" id="add-typed-names">Restrict</button>
+                <div id="page-perms-name-dropdown-wrapper" class="aui-dd-parent autocomplete autocomplete-user-or-group-target"></div>
+            </div>
+        </div>
+    </div>
+    <div id="page-permissions-tables">
+        <div id="page-permissions-table-div">
+                        <table id="page-permissions-table" class="page-permissions-table">
+                <tr id="page-permissions-no-views" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell">
+                            <span class="aui-icon aui-icon-small aui-iconfont-view"></span>
+                        <span>No view restrictions are defined for this page</span>
+                    </td>
+                </tr>
+                <tr id="page-permissions-no-edits" class="marker-row">
+                    <td colspan="3" class="page-permissions-marker-cell">
+                            <span class="aui-icon aui-icon-small edit-icon"></span>
+                        <span>No edit restrictions are defined for this page</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="page-inherited-permissions-table-div" class="hidden">
+            <span id="page-inherited-permissions-table-desc">
+                <a class="icon twisty-closed">Show/Hide</a>
+                <a id="toggle-inherited-permissions" title="Click to see inherited restrictions">This page has restricted parent pages. It can only be seen by users who can see those parent pages.</a>
+            </span>
+            <div id="page-inherited-permissions-tables" class="hidden page-inheritance-togglable"></div>
+        </div>
+    </div>
+</div>
+</script>
+
+<!-- End restrictions section -->
+
+        
+    
+            
+
+        
+                            
+    
+
+                    
+
+        
+        <a href="#page-metadata-end" class="assistive">Skip to end of metadata</a>
+<div id="page-metadata-start" class="assistive"></div>
+
+    <div class="page-metadata">
+        <ul>
+                            <li class="page-metadata-item noprint">
+
+    
+            
+    
+    <a id="content-metadata-page-restrictions" href="#" class="page-metadata-icon page-restrictions hidden" title="Page restrictions apply. Click the lock icon to view or edit the restriction.">
+                <span>Page restrictions apply</span>    </a>
+</li>
+                        <li class="page-metadata-modification-info">
+                                    Added by <a data-user-hover-bound="true" title="" href="https://stark.itblab.npfit.nhs.uk/display/%7Eianf" class="url fn confluence-userlink userlink-0" data-username="ianf">Ian Fawcus</a>, last edited by <a data-user-hover-bound="true" title="" href="https://stark.itblab.npfit.nhs.uk/display/%7Eianf" class="url fn confluence-userlink userlink-0" data-username="ianf">Ian Fawcus</a> on May 15, 2015
+                                                                    </li>
+                    </ul>
+                </div>
+
+
+<a href="#page-metadata-start" class="assistive">Go to start of metadata</a>
+<div id="page-metadata-end" class="assistive"></div>
+        
+                                
+        <div id="main-content" class="wiki-content">
+                           <p>The Git server is hosted on the Frey server:&nbsp;10.210.164.102</p><p>SSH onto the server as iam_user - the password is Careid1</p><p>In the /home/Iam_user directory run tthis command to start the server:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<div><div id="highlighter_719630" class="syntaxhighlighter nogutter  java"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="code"><div class="container" title="Hint: double-click to select code"><div class="line number1 index0 alt2"><code class="java plain">java -server -Xmx1024M -jar gitblit.jar &amp;</code></div></div></td></tr></tbody></table></div></div>
+</div></div>
+    
+        </div>
+
+        <!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+         <rdf:Description
+    rdf:about="https://stark.itblab.npfit.nhs.uk:443/display/DOH/Start+the+Git+server"
+    dc:identifier="https://stark.itblab.npfit.nhs.uk:443/display/DOH/Start+the+Git+server"
+    dc:title="Start the Git server"
+    trackback:ping="https://stark.itblab.npfit.nhs.uk:443/rpc/trackback/16908605"/>
+</rdf:RDF>
+-->
+
+                        
+    
+
+
+
+<div id="likes-and-labels-container"><div id="likes-section"><a href="" class="like-button">Like</a><span class="like-summary">Be the first to like this</span></div><div id="labels-section" class="pageSection group">
+    <div class="labels-section-content content-column" entityid="16908605" entitytype="page">
+	<div class="labels-content">
+		
+    <ul class="label-list label-list-right  has-pen">
+            <li class="no-labels-message">
+            No labels
+        </li>
+                <li class="labels-edit-container">
+            <a href="#" class="show-labels-editor editor-icon" title="Edit Labels (l)">
+                <span class="icon icon-edit">Edit Labels</span>
+            </a>
+        </li>
+        </ul>
+
+    </div>
+</div></div></div>
+        
+		
+            
+
+
+
+
+            
+    
+
+
+
+
+
+
+
+
+                    
+    
+<div id="comments-section" class="pageSection group">
+    
+    
+    
+    
+            <div class="bottom-comment-panels comment-panels">
+                                    
+    
+
+                    
+    
+
+
+    
+
+<div class="quick-comment-container comment add"><p class="comment-user-logo"><a data-user-hover-bound="true" class="userLogoLink userlink-1" data-username="rahulg" href="https://stark.itblab.npfit.nhs.uk/users/editmyprofilepicture.action" title=""><img title="" class="userLogo logo defaultLogo" src="Start%20the%20Git%20server%20-%20DevOps%20-%20HSCIC%20Confluence_files/add_profile_pic.png" alt="User icon: Add a picture of yourself"></a></p><div class="quick-comment-vertical-spacer"></div><div class="quick-comment-body"><div class="quick-comment-loading-container" style="display:none;"><p class="quick-comment-loading-message">Loading the Editor</p></div><div id="editor-messages"></div><div id="all-messages"></div><form style="display:block;" class="quick-comment-form aui" method="post" name="inlinecommentform" action="/pages/doaddcomment.action?pageId=16908605"><div title="Add a Comment (m)" class="quick-comment-prompt"><span>Write a comment…</span></div></form></div></div>
+
+    
+            </div>
+    
+                        <div style="display: none;" id="comments-actions" class="aui-toolbar noprint">
+                <p class="toolbar-group">
+                    <span class="toolbar-item"><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Start+the+Git+server?showComments=true&amp;showCommentArea=true#addcomment" id="add-comment-rte" accesskey="m" class="toolbar-trigger">Add Comment</a></span>
+                </p>
+            </div>
+            </div>
+
+
+            
+</div>
+
+
+    
+
+
+
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+
+
+    </div><!-- \#main -->
+        
+    
+        
+            <div style="margin-left: 285px;" id="footer">
+
+    <section class="footer-body">
+
+                        
+    
+
+    <ul id="poweredby">
+        <li class="noprint">Powered by <a href="http://www.atlassian.com/software/confluence" class="hover-footer-link">Atlassian Confluence</a> <span id="footer-build-information">5.1.3</span>, <a href="http://www.atlassian.com/software/confluence/overview/team-collaboration-software?utm_source=confluence-footer" class="hover-footer-link">Team Collaboration Software</a></li>
+        <li class="print-only">Printed by Atlassian Confluence 5.1.3, Team Collaboration Software.</li>
+        <li class="noprint"><a href="http://jira.atlassian.com/secure/BrowseProject.jspa?id=10470" class="hover-footer-link">Report a bug</a></li>
+        <li class="noprint"><a href="http://www.atlassian.com/about/connected.jsp?s_kwcid=Confluence-stayintouch" class="hover-footer-link">Atlassian News</a></li>
+    </ul>
+
+    
+
+            <center>Copyright © 2013 Health &amp; Social Care Information Centre</center>
+    
+    </section>
+
+</div>
+
+    
+</div>
+
+</div><!-- \#full-height-container -->
+</div><!-- \#page -->
+
+
+<div id="content-hover-0" class="ajs-content-hover"><div style="width: 300px;" class="contents"></div></div><div id="content-hover-1" class="ajs-content-hover"><div style="width: 300px;" class="contents"></div></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div style="display: none;" id="content-hover-shadow"><div class="tl"></div><div class="tr"></div><div class="l"></div><div class="r"></div><div class="bl"></div><div class="br"></div><div class="b"></div></div><div class="qr-notice aui-message warning"></div><div style="position: relative; z-index: 0;" id="fileuploadShim"></div><div class="plupload html5" style="position: absolute; background: none repeat scroll 0% 0% transparent; width: 1349px; height: 0px; overflow: hidden; z-index: -1; opacity: 0; top: 641px; left: 0px;" id="p19ms619i37kv42ah47vmk1m6p0_html5_container"><input id="p19ms619i37kv42ah47vmk1m6p0_html5" style="font-size: 999px; position: absolute; width: 100%; height: 100%;" accept="" multiple="multiple" type="file"></div><div id="editor-preload-container" style="display: none;">
+<div class="hidden">
+        
+
+
+<content tag="breadcrumbs">
+    
+    
+    <ol id="quickedit-breadcrumbs">
+                    
+                
+        <li class="first">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH">DevOps</a></span>
+                            
+                
+        </li><li>
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/collector/pages.action?key=DOH">Pages</a></span>
+                                                </li><li id="ellipsis" title="Show all breadcrumbs"><span><strong>…</strong></span></li>
+                                    
+                
+        <li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/DevOps+Home">DevOps Home</a></span>
+                                        
+                
+        </li><li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Wiki">Wiki</a></span>
+                                        
+                
+        </li><li class="hidden-crumb">
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Useful">Useful</a></span>
+                            
+                
+        </li><li>
+                
+
+                    <span class=""><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/How+To">How To</a></span>
+                            
+                
+        </li><li>
+                
+
+                    <span class="edited-page-title"><a href="https://stark.itblab.npfit.nhs.uk/display/DOH/Start+the+Git+server">Start the Git server</a></span>
+                </li></ol>
+
+</content>
+</div>
+
+
+<div id="editor-precursor">
+    <div class="cell">
+    
+        <div id="content-title-div">
+                                                                        
+                                                                
+
+<div class="field-group
+    ">
+    <label id="content-title-label" for="content-title">
+    
+        </label>
+
+                <input name="title" id="content-title" value="Start the Git server" tabindex="1" class="text   pagetitle" autocomplete="off" placeholder="" type="text">
+                      </div>        </div>
+
+        <div id="editor-messages">
+            
+                                
+<div id="heartbeat-div" class="hidden">
+    <div class="aui-message warning closeable">
+            <span class="aui-icon icon-warning"></span>
+        This page is being edited by <span id="other-users-span"></span>.
+    </div>
+</div>
+
+
+        </div>
+        <div id="all-messages">
+            
+<div id="action-messages">
+                        </div>
+        </div>
+    </div>
+</div>                                                                                            
+
+<script type="text/x-template" title="editor-css">
+    <link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/1.0/_/download/batch/confluence.web.resources:panel-styles/confluence.web.resources:panel-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/1.0/_/download/batch/confluence.web.resources:content-styles/confluence.web.resources:content-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/1.0/_/download/batch/confluence.web.resources:panel-styles/confluence.web.resources:panel-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.0/_/download/batch/com.atlassian.auiplugin:aui-experimental-page-layout-typography/com.atlassian.auiplugin:aui-experimental-page-layout-typography.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.0/_/download/batch/com.atlassian.auiplugin:aui-experimental-avatars/com.atlassian.auiplugin:aui-experimental-avatars.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.0/_/download/batch/com.atlassian.auiplugin:aui-experimental-page-layout/com.atlassian.auiplugin:aui-experimental-page-layout.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.1.3/_/download/batch/com.atlassian.confluence.editor:editor-content-styles/com.atlassian.confluence.editor:editor-content-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.0/_/download/batch/com.atlassian.auiplugin:aui-experimental-lozenge/com.atlassian.auiplugin:aui-experimental-lozenge.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/2.10/_/download/batch/com.atlassian.confluence.plugins.status-macro:view_content_status/com.atlassian.confluence.plugins.status-macro:view_content_status.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/2.10/_/download/batch/com.atlassian.confluence.plugins.status-macro:editor_content_status/com.atlassian.confluence.plugins.status-macro:editor_content_status.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.1.3/_/download/batch/com.atlassian.confluence.plugins.confluence-templates:variable-editor-content-styles/com.atlassian.confluence.plugins.confluence-templates:variable-editor-content-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/3.6.5/_/download/batch/confluence.extra.attachments:attachments-css/confluence.extra.attachments:attachments-css.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.1.3/_/download/batch/com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles/com.atlassian.confluence.plugins.confluence-inline-tasks:inline-tasks-styles.css" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/1/_/styles/colors.css?spaceKey=DOH" media="all">
+<link type="text/css" rel="stylesheet" href="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/1.0/_/download/resources/com.atlassian.confluence.themes.default:styles/default-theme.css" media="all">
+
+</script>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+<div class="editor-container">
+
+        
+            <div id="image-properties-tab-items" class="hidden">
+                <div title="Effects" data-weight="10">image-effects</div>
+            <div title="Title" data-weight="20">image-attributes</div>
+    </div>
+            
+
+<div id="link-browser-tab-items" class="hidden">
+                <div title="Search" data-weight="10">search</div>
+            <div title="Recently Viewed" data-weight="20">recentlyviewed</div>
+            <div title="Attachments" data-weight="30">attachments</div>
+            <div title="Web Link" data-weight="40">weblink</div>
+            <div title="Advanced" data-weight="50">advanced</div>
+    </div>
+            
+
+
+
+
+
+
+
+
+
+
+
+        <div id="toolbar">
+        <div id="rte-toolbar" class="aui-toolbar aui-toolbar2">
+
+            <div class="aui-toolbar2-primary">
+                <ul class="aui-buttons">
+                                        <li id="format-dropdown" class="toolbar-item toolbar-dropdown">
+                        <div class="aui-dd-parent">
+                            <a id="format-dropdown-display" href="#" class="toolbar-trigger aui-dd-trigger aui-button" data-control-id="formatselect">
+                                <span class="dropdown-text">Paragraph</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+                            <ul id="format-dropdown-display-menu" class="aui-dropdown hidden">
+                                    <li class="dropdown-item format-p" data-format="p" data-tooltip="Paragraph (Ctrl+0)">
+        <a class="item-link" href="#">Paragraph</a>
+    </li>
+                                    <li class="dropdown-item format-h1" data-format="h1" data-tooltip="Heading 1 (Ctrl+1)">
+        <a class="item-link" href="#">Heading 1</a>
+    </li>
+                                    <li class="dropdown-item format-h2" data-format="h2" data-tooltip="Heading 2 (Ctrl+2)">
+        <a class="item-link" href="#">Heading 2</a>
+    </li>
+                                    <li class="dropdown-item format-h3" data-format="h3" data-tooltip="Heading 3 (Ctrl+3)">
+        <a class="item-link" href="#">Heading 3</a>
+    </li>
+                                    <li class="dropdown-item format-h4" data-format="h4" data-tooltip="Heading 4 (Ctrl+4)">
+        <a class="item-link" href="#">Heading 4</a>
+    </li>
+                                    <li class="dropdown-item format-h5" data-format="h5" data-tooltip="Heading 5 (Ctrl+5)">
+        <a class="item-link" href="#">Heading 5</a>
+    </li>
+                                    <li class="dropdown-item format-h6" data-format="h6" data-tooltip="Heading 6 (Ctrl+6)">
+        <a class="item-link" href="#">Heading 6</a>
+    </li>
+                                    <li class="dropdown-item format-pre" data-format="pre" data-tooltip="Preformatted (Ctrl+7)">
+        <a class="item-link" href="#">Preformatted</a>
+    </li>
+                                    <li class="dropdown-item format-blockquote" data-format="blockquote" data-tooltip="Quote (Ctrl+8)">
+        <a class="item-link" href="#">Quote</a>
+    </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="aui-buttons">
+                    
+                <li class="toolbar-item aui-button" id="rte-button-bold" data-tooltip="Bold (Ctrl+B)">
+        <a class="toolbar-trigger" href="#" data-control-id="bold">
+                <span class="icon icon-bold ">Bold</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-italic" data-tooltip="Italic (Ctrl+I)">
+        <a class="toolbar-trigger" href="#" data-control-id="italic">
+                <span class="icon icon-italic ">Italic</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-underline" data-tooltip="Underline (Ctrl+U)">
+        <a class="toolbar-trigger" href="#" data-control-id="underline">
+                <span class="icon icon-underline ">Underline</span>
+        </a>
+    </li>
+                                        <li id="color-picker-control" class="toolbar-item toolbar-splitbutton">
+                        <a class="toolbar-trigger aui-button" href="#" id="rte-button-color" data-color="003366" data-tooltip="Colour">
+                                <span class="icon icon-textcolor ">Colour picker</span>
+                            <span class="selected-color"></span>
+                        </a>
+                        <div class="aui-dd-parent">
+                            <a class="toolbar-trigger aui-dd-trigger aui-button" href="#" id="rte-button-color-selector" data-control-id="colorSelector" data-tooltip="More colours">
+                                    <span class="icon icon-dropdown ">More colours</span>
+                            </a>
+                            <div class="color-picker-container">
+                                <div class="color-picker aui-dropdown hidden">
+                                    <ul>
+            <li><a href="#" style="background-color: #000000" data-color="000000">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #993300" data-color="993300">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #333300" data-color="333300">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #003300" data-color="003300">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #003366" data-color="003366">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #000080" data-color="000080">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #333399" data-color="333399">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #333333" data-color="333333">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #800000" data-color="800000">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FF6600" data-color="FF6600">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #808000" data-color="808000">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #008000" data-color="008000">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #008080" data-color="008080">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #0000FF" data-color="0000FF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #666699" data-color="666699">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #808080" data-color="808080">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FF0000" data-color="FF0000">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FF9900" data-color="FF9900">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #99CC00" data-color="99CC00">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #339966" data-color="339966">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #33CCCC" data-color="33CCCC">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #3366FF" data-color="3366FF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #800080" data-color="800080">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #999999" data-color="999999">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FF00FF" data-color="FF00FF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FFCC00" data-color="FFCC00">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FFFF00" data-color="FFFF00">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #00FF00" data-color="00FF00">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #00FFFF" data-color="00FFFF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #00CCFF" data-color="00CCFF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #993366" data-color="993366">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #C0C0C0" data-color="C0C0C0">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FF99CC" data-color="FF99CC">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FFCC99" data-color="FFCC99">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FFFF99" data-color="FFFF99">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #CCFFCC" data-color="CCFFCC">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #CCFFFF" data-color="CCFFFF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #99CCFF" data-color="99CCFF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #CC99FF" data-color="CC99FF">&nbsp;</a></li>
+            <li><a href="#" style="background-color: #FFFFFF" data-color="FFFFFF">&nbsp;</a></li>
+    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li id="more-menu" class="toolbar-item toolbar-dropdown">
+                        <div class="aui-dd-parent">
+                            <a id="rte-button-more" href="#" class="toolbar-trigger aui-dd-trigger aui-button" data-tooltip="More">
+                                    <span class="icon icon-more ">Formatting</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+                            <div id="rte-button-more-menu" class="aui-dropdown grouped hidden">
+                                <div class="grouped-dropdown-item">
+                                    <ul>
+                                                                <li class="dropdown-item more-menu-trigger" data-control-id="strikethrough" data-tooltip="Strikethrough (Ctrl+Shift+S)">
+        <a id="rte-strikethrough" class="item-link" href="#">
+                <span class="icon icon-check hidden"></span>
+Strikethrough
+        </a>
+    </li>
+                                                                 <li class="dropdown-item more-menu-trigger" data-control-id="sub" data-tooltip="">
+        <a id="rte-sub" class="item-link" href="#">
+                <span class="icon icon-check hidden"></span>
+Subscript
+        </a>
+    </li>
+                                                                 <li class="dropdown-item more-menu-trigger" data-control-id="sup" data-tooltip="">
+        <a id="rte-sup" class="item-link" href="#">
+                <span class="icon icon-check hidden"></span>
+Superscript
+        </a>
+    </li>
+                                                        <li class="dropdown-item more-menu-trigger" data-control-id="monospace" data-tooltip="Format text with monospaced font">
+        <a id="rte-monospace" class="item-link" href="#">
+                <span class="icon icon-check hidden"></span>
+Monospace
+        </a>
+    </li>
+
+                                                                                                                    </ul>
+                                </div>
+                                <div class="grouped-dropdown-item">
+                                    <ul>
+                                            <li class="dropdown-item more-menu-trigger no-icon" data-format="removeformat" data-tooltip="Clears formatting on currently selected text">
+        <a id="rte-removeformat" class="item-link" href="#">
+            Clear Formatting
+        </a>
+    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+
+                <ul class="aui-buttons">
+                    
+                <li class="toolbar-item aui-button" id="rte-button-bullist" data-tooltip="Bullet list (Ctrl+Shift+B)">
+        <a class="toolbar-trigger" href="#" data-control-id="bullist">
+                <span class="icon icon-bullist ">Bullet list</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-numlist" data-tooltip="Numbered list (Ctrl+Shift+N)">
+        <a class="toolbar-trigger" href="#" data-control-id="numlist">
+                <span class="icon icon-numlist ">Numbered list</span>
+        </a>
+    </li>
+                                            
+                <li class="toolbar-item aui-button" id="rte-button-tasklist" data-tooltip="Task list ([ then ])">
+        <a class="toolbar-trigger" href="#" data-control-id="tasklist">
+                <span class="icon icon-tasklist ">Task list</span>
+        </a>
+    </li>
+                                    </ul>
+
+                <ul class="aui-buttons">
+                    
+                <li class="toolbar-item aui-button" id="rte-button-outdent" data-tooltip="Outdent">
+        <a class="toolbar-trigger" href="#" data-control-id="outdent">
+                <span class="icon icon-outdent ">Outdent</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-indent" data-tooltip="Indent">
+        <a class="toolbar-trigger" href="#" data-control-id="indent">
+                <span class="icon icon-indent ">Indent</span>
+        </a>
+    </li>
+                </ul>
+
+                <ul class="aui-buttons">
+                    
+                <li class="toolbar-item aui-button" id="rte-button-justifyleft" data-tooltip="Align left">
+        <a class="toolbar-trigger" href="#" data-control-id="justifyleft">
+                <span class="icon icon-justifyleft ">Align left</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-justifycenter" data-tooltip="Align center">
+        <a class="toolbar-trigger" href="#" data-control-id="justifycenter">
+                <span class="icon icon-justifycenter ">Align center</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-justifyright" data-tooltip="Align right">
+        <a class="toolbar-trigger" href="#" data-control-id="justifyright">
+                <span class="icon icon-justifyright ">Align right</span>
+        </a>
+    </li>
+                </ul>
+
+                <ul class="aui-buttons">
+                    <li class="toolbar-item" data-tooltip="Insert Link (Ctrl+K)">
+                        <a id="rte-button-link" class="toolbar-trigger aui-button" href="#" data-control-id="linkbrowserButton">
+                                <span class="icon icon-link "></span>
+                            <span class="trigger-text">Link</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="aui-buttons">
+                    <li class="toolbar-item toolbar-dropdown" id="insert-table-dropdown">
+                        <div class="aui-dd-parent">
+                            <a href="#" class="toolbar-trigger aui-dd-trigger aui-button" id="rte-button-insert-table" data-tooltip="Insert Table">
+                                    <span class="icon icon-table "></span>
+                                <span class="dropdown-text">Table</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+
+                            <div id="table-picker-container" class="hidden">
+                                <div class="table-picker-box" data-tooltip="Hold SHIFT for a table without a heading.">
+                                    <div class="table-picker-background">
+                                        <div class="picker picker-cell"></div>
+                                        <div class="picker picker-heading heading"></div>
+                                        <div class="picker picker-selected-cell"></div>
+                                        <div class="picker picker-selected-heading heading"></div>
+                                    </div>
+                                    <p class="desc"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                
+                <ul class="aui-buttons">
+                    <li class="toolbar-item toolbar-dropdown" id="insert-menu">
+                        <div class="aui-dd-parent">
+                            <a href="#" class="toolbar-trigger aui-dd-trigger aui-button" id="rte-button-insert" data-tooltip="Insert More Content">
+                                    <span class="icon icon-insert "></span>
+                                <span class="dropdown-text">Insert</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+
+                            <div id="insert-menu-options" class="aui-dropdown grouped hidden">
+                                <div class="grouped-dropdown-item">
+                                    <span class="assistive">Insert Content</span>
+                                    <ul id="content-insert-list">
+                                        
+        
+        <li class="dropdown-item content-image" data-command="mceConfimage" data-tooltip="Insert Image (Ctrl+M)">
+        <a id="rte-insert-image" class="item-link" href="#">
+                <span class="icon "></span>
+ Image
+        </a>
+    </li>
+                                        
+        
+        <li class="dropdown-item content-link" data-control-id="linkbrowserButton" data-tooltip="Insert Link (Ctrl+K)">
+        <a id="rte-insert-link" class="item-link" href="#">
+                <span class="icon "></span>
+ Link
+        </a>
+    </li>
+                                                                                    
+    
+        <li class="dropdown-item content-attachment" data-command="mceConfAttachments" data-tooltip="Insert Attachment">
+        <a id="rte-insert-attachment" class="item-link" href="#">
+                <span class="icon "></span>
+ Attachment
+        </a>
+    </li>
+                                                                                
+    
+        <li class="dropdown-item content-symbol" data-command="confCharmap" data-tooltip="Insert Symbol">
+        <a id="rte-insert-symbol" class="item-link" href="#">
+                <span class="icon "></span>
+ Symbol
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-emoticon" data-command="mceEmotion" data-tooltip="Insert Emoticon">
+        <a id="rte-insert-emoticon" class="item-link" href="#">
+                <span class="icon "></span>
+ Emoticon
+        </a>
+    </li>
+                                        
+        
+        <li class="dropdown-item content-wikimarkup" data-command="InsertWikiMarkup" data-tooltip="Insert Wiki Markup (Ctrl+Shift+D)">
+        <a id="rte-insert-wikimarkup" class="item-link" href="#">
+                <span class="icon "></span>
+ Wiki Markup
+        </a>
+    </li>
+                                        
+    
+        <li class="dropdown-item content-hr" data-command="InsertHorizontalRule" data-tooltip="Insert horizontal rule (----)">
+        <a id="rte-insert-hr" class="item-link" href="#">
+                <span class="icon "></span>
+ Horizontal rule
+        </a>
+    </li>
+                                                                                    
+        
+        <li class="dropdown-item content-tasklist" data-command="InsertInlineTaskListNoToggle" data-tooltip="Insert Task List ([ then ])">
+        <a id="rte-insert-tasklist" class="item-link" href="#">
+                <span class="icon "></span>
+ Task List
+        </a>
+    </li>
+                                                                            </ul>
+                                </div>
+                                <div class="grouped-dropdown-item">
+                                    <span class="assistive">Insert Macro</span>
+                                    <ul id="macro-insert-list">
+                                                                        
+                                                                        
+                                <li class="dropdown-item macro-insertmention-button" data-macro-name="insertmention-button" data-tooltip="Insert 'User Mention' macro">
+        <a id="insertmention-button" class="item-link" href="#">
+                <span class="icon "></span>
+ User Mention
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-info" data-macro-name="info" data-tooltip="Insert 'Info' macro">
+        <a id="info" class="item-link" href="#">
+                <span class="icon "></span>
+ Info
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-jiralink" data-macro-name="jiralink" data-tooltip="Insert 'JIRA Issue' macro">
+        <a id="jiralink" class="item-link" href="#">
+                <span class="icon "></span>
+ JIRA Issue
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-status" data-macro-name="status" data-tooltip="Insert 'Status' macro">
+        <a id="status" class="item-link" href="#">
+                <span class="icon "></span>
+ Status
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-gallery" data-macro-name="gallery" data-tooltip="Insert 'Gallery' macro">
+        <a id="gallery" class="item-link" href="#">
+                <span class="icon "></span>
+ Gallery
+        </a>
+    </li>
+                                                                                                <li class="dropdown-item macro-toc" data-macro-name="toc" data-tooltip="Insert 'Table of Contents' macro">
+        <a id="toc" class="item-link" href="#">
+                <span class="icon "></span>
+ Table of Contents
+        </a>
+    </li>
+                                                                                                                            
+        
+        <li class="dropdown-item content-macro" data-command="mceConfMacroBrowser" data-tooltip="Open the macro browser (Ctrl+Shift+A)">
+        <a id="rte-insert-macro" class="item-link" href="#">
+                <span class="icon "></span>
+ Other Macros
+        </a>
+    </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                                <ul class="aui-buttons">
+                    <li id="pagelayout-menu" class="toolbar-item toolbar-dropdown">
+                        <div class="aui-dd-parent">
+                            <a href="#" class="toolbar-trigger aui-dd-trigger aui-button" id="rte-button-pagelayout" data-tooltip="Page Layout">
+                                    <span class="icon icon-layout pagelayout-default">Page Layout</span>
+                                    <span class="icon icon-dropdown "></span>
+                            </a>
+
+                            <ul id="pagelayout-menu-options" class="aui-dropdown hidden">
+                                <li class="dropdown-item" data-tooltip="No Layout">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-none&quot;, &quot;columns&quot;: 0   }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-none">No Layout</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;]   }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two-simple">Two column (simple)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple, left sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple-left&quot;, &quot;columns&quot;: [&quot;aside&quot;, &quot;large&quot;]   }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two-simple-left">Two column (simple, left sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (simple, right sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-simple-right&quot;, &quot;columns&quot;: [&quot;large&quot;, &quot;aside&quot;]   }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two-simple-right">Two column (simple, right sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column (simple)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three-simple&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;]   }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-three-simple">Three column (simple)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two">Two column</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (left sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-left&quot;, &quot;columns&quot;: [&quot;aside&quot;, &quot;large&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two-left">Two column (left sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Two column (right sidebar)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-two-right&quot;, &quot;columns&quot;: [&quot;large&quot;, &quot;aside&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-two-right">Two column (right sidebar)</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three&quot;, &quot;columns&quot;: [&quot;&quot;, &quot;&quot;, &quot;&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-three">Three column</span>
+    </a>
+</li>
+                                <li class="dropdown-item" data-tooltip="Three column (left and right sidebars)">
+    <a href="#" class="item-link" data-atlassian-layout="{&quot;name&quot;: &quot;pagelayout-three-sidebars&quot;, &quot;columns&quot;: [&quot;sidebars&quot;, &quot;large&quot;, &quot;sidebars&quot;] , &quot;header&quot;: true  , &quot;footer&quot;:true  }">
+            <span class="icon icon-check hidden"></span>
+            <span class="icon icon-layout pagelayout-three-sidebars">Three column (left and right sidebars)</span>
+    </a>
+</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                
+                <ul class="aui-buttons">
+                    
+                <li class="toolbar-item aui-button" id="rte-button-undo" data-tooltip="Undo (Ctrl+Z)">
+        <a class="toolbar-trigger" href="#" data-control-id="undo">
+                <span class="icon icon-undo ">Undo</span>
+        </a>
+    </li>
+                    
+                <li class="toolbar-item aui-button" id="rte-button-redo" data-tooltip="Redo (Ctrl+Y)">
+        <a class="toolbar-trigger" href="#" data-control-id="redo">
+                <span class="icon icon-redo ">Redo</span>
+        </a>
+    </li>
+                </ul>
+
+                
+            </div>            <div class="aui-toolbar2-secondary">
+                <ul class="aui-buttons">
+                        <li class="toolbar-item aui-button" id="rte-button-searchreplace" data-tooltip="Find/Replace">
+        <a class="toolbar-trigger" href="#" data-control-id="searchreplace">
+                <span class="icon icon-searchreplace ">Find/Replace</span>
+        </a>
+    </li>
+                </ul>
+                <ul class="aui-buttons">
+                        <li class="toolbar-item aui-button" id="rte-button-help" data-tooltip="Help">
+        <a class="toolbar-trigger" href="#" data-control-id="help">
+                <span class="icon icon-help ">Keyboard Shortcuts Help</span>
+        </a>
+    </li>
+                </ul>
+                <ul class="aui-buttons">
+                        <li class="toolbar-item aui-button" id="rte-button-hidetools" data-tooltip="Hide Tools">
+        <a class="toolbar-trigger" href="#" data-control-id="hidetools">
+                <span class="icon icon-hidetools ">Hide the toolbars</span>
+        </a>
+    </li>
+                        <li class="toolbar-item aui-button" id="rte-button-fullscreen" data-tooltip="Full Screen">
+        <a class="toolbar-trigger" href="#" data-control-id="fullscreen">
+                <span class="icon icon-fullscreen ">Launch editor full screen</span>
+        </a>
+    </li>
+                </ul>
+            </div>        </div>    </div>
+    <div id="wysiwyg" class="resize">
+        <div id="rte" class="cell editor-default">
+            <textarea id="wysiwygTextarea" name="wysiwygContent" class="hidden tinymce-editor"></textarea>
+        </div>
+    </div>
+    <div id="editor-html-source-container" class="hidden">
+        <textarea id="editor-html-source" class="monospaceInput"></textarea>
+    </div>
+
+    <div id="preview">
+                        <div id="previewArea" class="cell">
+        </div>
+    </div>
+
+    
+
+<div id="savebar-container">
+    <div id="rte-savebar" class="aui-toolbar aui-toolbar2">
+
+                    
+        
+        <div class="toolbar-split toolbar-split-row">
+            <div class="toolbar-split toolbar-split-left">
+            <ul class="aui-buttons">
+                                                                                            <li class="toolbar-item aui-button" data-tooltip="Edit Page Restrictions">
+                        <a class="toolbar-trigger" href="#" id="rte-button-restrictions">
+                            <span class="icon icon-unrestricted"></span>
+                            <span class="trigger-text">Unrestricted</span>
+                        </a>
+                    </li>
+                                                                            <li class="toolbar-item aui-button" data-tooltip="Insert Attachment">
+                        <a class="toolbar-trigger" href="#" id="rte-button-attachments">
+                            <span class="icon icon-attachment"></span>
+                            <span class="trigger-text">Attachments</span>
+                        </a>
+                    </li>
+                                                                            <li class="toolbar-item aui-button" data-tooltip="Edit Page Labels">
+                        <a class="toolbar-trigger" href="#" id="rte-button-labels">
+                            <span class="icon icon-labels"></span>
+                            <span class="trigger-text">Labels</span>
+                        </a>
+                    </li>
+                            </ul>
+                    </div>            <div class="toolbar-split toolbar-split-right">
+                            <div class="aui-buttons" id="toolbar-group-minor-edit">
+                    <ul class="toolbar-group toolbar-group-watch-page" id="toolbar-group-watch-page-after-comment">
+                        <li class="toolbar-item">
+                            <label for="watchPage">Watch this page</label>
+                            <input id="watchPage" name="watchPageAfterComment" value="true" checked="checked" type="checkbox">
+                        </li>
+                    </ul>
+                                             <span class="rte-toolbar-comment toolbar-item">
+                            <input id="versionComment" name="versionComment" placeholder="What did you change?" class="text" size="35" type="text">
+                            <label for="versionComment" class="assistive">What did you change?</label>
+                        </span>
+                                                                 <span class="minor-edit toolbar-item">
+                            <input id="notifyWatchers" name="notifyWatchers" value="true" checked="checked" type="checkbox">
+                            <label for="notifyWatchers"><span>Notify watchers</span></label>
+                        </span>
+                                    </div>
+            
+                    <div class="aui-buttons">
+                <span id="rte-spinner" class="toolbar-item">&nbsp;</span>
+            </div>
+            <ul class="aui-buttons toolbar-group-edit assistive">
+                <li class="toolbar-item">
+                    <a id="rte-button-edit" class="toolbar-trigger aui-button" title="Return To Edit Mode" href="#"><span class="trigger-text">Edit</span></a>
+                </li>
+            </ul>
+            <ul class="aui-buttons toolbar-group-preview">
+                <li class="toolbar-item">
+                    <a id="rte-button-preview" title="Preview" class="toolbar-trigger aui-button" href="#"><span class="trigger-text"><span>Preview</span></span></a>
+                </li>
+            </ul>
+
+        
+            <ul class="save-button-container">
+                                                                        
+                                                                        
+            <li class="toolbar-item">
+                            <button class="toolbar-trigger aui-button aui-button-primary" type="submit" href="#" id="rte-button-publish" name="confirm" value="Save" tabindex="101" title="Save your page">
+                                <span class="trigger-text"><span>Save</span></span>
+                            </button>
+                        </li>
+                                                </ul>
+                                            <ul class="aui-buttons">
+                <li class="toolbar-item toolbar-item-link">
+                    <button class="toolbar-trigger aui-button aui-button-link" type="submit" id="rte-button-cancel" value="discard" name="cancel"><span class="trigger-text">Cancel</span></button>
+                </li>
+            </ul>
+
+        </div>         </div>
+                    <div class="toolbar-split toolbar-split-row" id="toolbar-hints-draft-status">
+                <div class="toolbar-split toolbar-split-left">
+                    <div class="hints hints-open">
+                        <span class="hints-controls">
+                            <a href="#" class="hints-next" data-tooltip="Next hint"><span class="icon">Next hint</span></a>
+                        </span>
+                        <span class="hints-text"></span>
+                    </div>
+                </div>
+                <div class="toolbar-split toolbar-split-right">
+                    <div id="draft-status"></div>
+                </div>
+            </div>
+             </div> </div>
+
+
+    
+</div>
+
+
+
+<script type="text/x-template" title="dynamic-editor-metadata">
+            <meta name="ajs-content-type" content="page">
+            <meta name="ajs-min-editor-height" content="150">
+            <meta name="ajs-editor-plugin-resource-prefix" content="/s/en_GB-1988229788/4226/d7686547091e645d7b0285207c0b86be721c74eb.3/5.1.3/_">
+            <meta name="ajs-num-attachments" content="0">
+            <meta name="ajs-auto-start" content="false">
+            <meta name="ajs-cancel-button-close-text" content="Close">
+            <meta name="ajs-content-id" content="16908605">
+            <meta name="ajs-action-locale" content="en_GB">
+            <meta name="ajs-save-drafts" content="true">
+            <meta name="ajs-use-inline-tasks" content="true">
+            <meta name="ajs-heartbeat" content="true">
+            <meta name="ajs-cancel-button-discard-text" content="">
+            <meta name="ajs-draft-id" content="0">
+            <meta name="ajs-new-page" content="false">
+            <meta name="ajs-form-name" content="inlinecommentform">
+            <meta name="ajs-attachment-source-content-id" content="16908605">
+            <meta name="ajs-editor-mode" content="richtext">
+            <meta name="ajs-draft-type" content="page">
+            <meta name="ajs-existing-draft-id" content="0">
+            <meta name="ajs-can-attach-files" content="true">
+                
+            		    <meta name="ajs-max-thumb-width" content="300">
+		    <meta name="ajs-can-send-email" content="true">
+		    <meta name="ajs-is-dev-mode" content="false">
+		    <meta name="ajs-draft-save-interval" content="30000">
+		    <meta name="ajs-show-hidden-user-macros" content="false">
+		    <meta name="ajs-is-admin" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autocomplete" content="false">
+		    <meta name="ajs-confluence.prefs.editor.disable.autoformat" content="false">
+		    <meta name="ajs-heartbeat-interval" content="30000">
+	
+    </script>
+
+
+<div id="hidden-permission-fields" class="hidden">
+    <input id="viewPermissionsUsers" name="viewPermissionsUsers" type="text">
+    <input id="editPermissionsUsers" name="editPermissionsUsers" type="text">
+    <input id="viewPermissionsGroups" name="viewPermissionsGroups" type="text">
+    <input id="editPermissionsGroups" name="editPermissionsGroups" type="text">
+</div>
+
+<script type="text/x-template" title="tableForm">
+    <form id="tinymce-table-form" class="aui">
+        <div class="field-group">
+            <label for="rows">Rows</label>
+            <input id="rows" name="rows" type="text" size="3" autocomplete="off" value="{0}">
+        </div>
+        <div class="field-group">
+            <label for="cols">Columns</label>
+            <input id="cols" name="cols" type="text" size="3" autocomplete="off" value="{1}">
+        </div>
+        <div class="field-group hidden">
+            <input id="width" type="hidden" name="width" value="">
+            <label for="width">Width</label>
+        </div>
+        <div class="group">
+            <div class="checkbox">
+                <input id="table-heading-checkbox" class="checkbox" type="checkbox" name="heading" checked="checked" value="true">
+                <label for="table-heading-checkbox">First row is heading</label>
+            </div>
+        </div>
+        <div class="group hidden">
+            <div class="checkbox">
+                <input id="table-equal-width-columns-checkbox" class="checkbox" type="checkbox" name="equal-width-columns" value="false">
+                <label for="table-equal-width-columns-checkbox">Equal width columns</label>
+            </div>
+        </div>
+    </form>
+</script>
+<input name="draftId" value="0" id="draftId" type="hidden"><input name="originalVersion" value="1" id="originalVersion" type="hidden">    <input name="atl_token" value="d8e8a1e4fba406a86f91a307e0204630dbec354f" type="hidden">
+</div></body></html>

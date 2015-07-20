@@ -1,0 +1,2 @@
+!/bin/bash
+curl "http://172.16.222.142:8080/jenkins/git/notifyCommit?url=git://localhost/FirstRepository.git"
